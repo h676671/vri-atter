@@ -21,11 +21,10 @@ public class KortSamling {
 	 * Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	 */
 	public KortSamling() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("KortSamling"));
-		// TODO - END
+
+		samling = new Kort[MAKS_KORT];
+		antall = 0;
+
 	}
 
 	/**
@@ -35,7 +34,7 @@ public class KortSamling {
 	 * først og fremst ment å brukes i testklasser. Om man trenger
 	 * kortene utenfor, anbefales metoden getAlleKort().
 	 * 
-	 * @return tabell av kort.
+	 *@return tabell av kort.
 	 */
 	public Kort[] getSamling() {
 		
@@ -50,11 +49,8 @@ public class KortSamling {
 	 */
 	public int getAntalKort() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+		return antall;
+
 	}
 	
 	/**
@@ -64,11 +60,8 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		
-		// TODO - START
-				
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+		return (antall == 0);
+
 	}
 
 	/**
@@ -78,12 +71,13 @@ public class KortSamling {
 	 *            er kortet som skal leggast til.
 	 */
 	public void leggTil(Kort kort) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-		
+		if (antall < MAKS_KORT) {
+			samling[antall] = kort;
+			antall++;
+		} else {
+			System.out.println("Kortstokk er full.");
+		}
+
 	}
 	
 	/**
@@ -92,11 +86,11 @@ public class KortSamling {
 	 */
 	public void leggTilAlle() {
 		
-		// TODO - START
-		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		for (int farge = 0; farge < 4; farge++){
+			for (int verdi = 1 ; verdi <= MAKS_KORT; verdi++) {
+				leggTil(new Kort(farge, verdi));
+			}
+		}
 	}
 
 	/**
