@@ -97,11 +97,9 @@ public class KortSamling {
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
 	public void fjernAlle() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+
+		antall = 0;
+
 	}
 	
 	/**
@@ -111,13 +109,9 @@ public class KortSamling {
 	 *         null.
 	 */
 	public Kort seSiste() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - END
-		
+		return samling[antall-1];
+
 	}
 
 	/**
@@ -128,11 +122,13 @@ public class KortSamling {
 	 */
 	public Kort taSiste() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+		if (!erTom()){
+			antall--;
+			return samling[antall];
+		} else {
+			return null;
+		}
+
 	}
 	
 	/**
@@ -144,12 +140,12 @@ public class KortSamling {
 	 */
 	public boolean har(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// return false;
-		// TODO - END
-		
+		for (int i = 0 ; i < antall ; i++){
+			if (samling[i] == kort) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -164,11 +160,16 @@ public class KortSamling {
 			 
 	public boolean fjern(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		for (int i = 0 ; i < antall ; i++){
+			if (samling[i] == kort){
+				for (int j = 1; j < antall - 1 ; j++){
+					samling[j] = samling[j] + 1;
+				}
+				antall--;
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -179,12 +180,11 @@ public class KortSamling {
 	 */
 	public Kort[] getAllekort() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
-	
+		Kort[] alleKort = new Kort[antall];
+		for (int i = 0 ; i < antall ; i++){
+			alleKort[i] = samling[i]
+		}
+		return alleKort;
 	}
 	
 }
