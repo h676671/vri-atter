@@ -18,7 +18,7 @@ public class KortUtils {
 	
 	public static void sorter(KortSamling samling) {
 
-		Arrays.sort(samling.getSamling()), samling.getAntalKort());
+		Arrays.sort(samling.getSamling());
 
 	}
 	
@@ -33,16 +33,16 @@ public class KortUtils {
 		Random random = new Random();
 
 		Kort[] kort = samling.getSamling();
-		int n = samling.getAntalKort();
+		int antalKort = samling.getAntalKort();
 
-		for (int i = n - 1 ; i > 0; i--) {
-			int j = random.nextInt(i+1);
+		for (int i = 0 ; i < antalKort; i++) {
+			int j = random.nextInt(antalKort);
 
 			//bytter om kortene her
-			kort[i] = kort[j];
-			Kort temp = kort[i];
-			kort[j] = temp
-
+			Kort kort1 = kort[i];
+			Kort kort2 = kort[j];
+			kort[i] = kort2;
+			kort[j] = kort1;
 		}
 	}
 	
