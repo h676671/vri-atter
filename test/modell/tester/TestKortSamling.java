@@ -89,7 +89,7 @@ public class TestKortSamling {
 	
 		KortSamling samling = new KortSamling();
 		
-		samling.leggTilAlle();
+		samling.leggTilAlle(bunkeTil);
 		
 		assertEquals(4 * Regler.MAKS_KORT_FARGE,samling.getAntalKort());
 		

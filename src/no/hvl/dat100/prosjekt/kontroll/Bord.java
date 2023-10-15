@@ -2,7 +2,6 @@ package no.hvl.dat100.prosjekt.kontroll;
 
 import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.modell.KortUtils;
-import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.modell.Kort;
 
 /**
@@ -21,9 +20,10 @@ public class Bord {
      * Alle kortene legges til fra-bunken.
      */
     public Bord() {
-
+        //TODO - Start
         bunkeFra = new KortSamling();
         bunkeTil = new KortSamling();
+        //TODO - End
 
         //bunkeFra.leggTil(Kort);
 
@@ -35,8 +35,10 @@ public class Bord {
      * @return referanse/peker til til-bunken.
      */
     public KortSamling getBunkeTil() {
+        //TODO - Start
         Bord bunkeTil = new Bord();
         return bunkeTil.getBunkeTil();
+        //TODO - End
     }
 
     /**
@@ -45,8 +47,10 @@ public class Bord {
      * @return referanse/peker til fra-bunken.
      */
     public KortSamling getBunkeFra() {
+        //TODO - Start
         Bord bunkeFra = new Bord();
         return bunkeFra.getBunkeFra();
+        //TODO - End
     }
 
     /**
@@ -55,9 +59,9 @@ public class Bord {
      * @return true om til-bunken er tom, false ellers.
      */
     public boolean bunketilTom() {
-
+        //TODO - Start
         return bunkeTil.erTom();
-
+        //TODO - End
     }
 
     /**
@@ -66,9 +70,9 @@ public class Bord {
      * @return true om fra-bunken er tom, false ellers.
      */
     public boolean bunkefraTom() {
-
+        //TODO - Start
         return bunkeFra.erTom();
-
+        //TODO - End
     }
 
     /**
@@ -77,9 +81,9 @@ public class Bord {
      * @return antall kort i fra-bunken.
      */
     public int antallBunkeFra() {
-
-       return bunkeFra.getAntalKort();
-
+        //TODO - Start
+        return bunkeFra.getAntalKort();
+        //TODO - End
     }
 
     /**
@@ -88,9 +92,9 @@ public class Bord {
      * @return antall kort i til-bunken.
      */
     public int antallBunkeTil() {
-
+        //TODO - Start
         return bunkeTil.getAntalKort();
-
+        //TODO - End
     }
 
     /**
@@ -98,10 +102,10 @@ public class Bord {
      * billedsiden opp, men det trenger ikke gruppen tenke på).
      */
     public void vendOversteFraBunke() {
-
+        //TODO - Start
         Kort toppKort = bunkeFra.taSiste();
         bunkeTil.leggTil(toppKort);
-
+        //TODO - End
     }
 
     /**
@@ -114,7 +118,9 @@ public class Bord {
         //returnerer øverste kortet fra "bunkeFra"
 
         //kan også: Kort toppKort = bunkeFra.taSiste();
+        //TODO - Start
         return bunkeFra.taSiste();
+        //TODO - End
 
     }
 
@@ -125,8 +131,9 @@ public class Bord {
      * @return peker/referanse til øverste kortet i til-bunken.
      */
     public Kort seOversteBunkeTil() {
-
-       return bunkeTil.taSiste();
+        //TODO - Start
+        return bunkeTil.taSiste();
+        //TODO - End
 
     }
 
@@ -137,16 +144,16 @@ public class Bord {
      * til-bunken. Det vil nå være det eneste kortet i til-bunken.
      */
     public void snuTilBunken() {
-
+        //TODO - Start
         if (bunkeFra.erTom()){
             Kort kortOnTop = bunkeTil.taSiste();
-            bunkeFra.leggTilAlle();
+            bunkeFra.leggTilAlle(bunkeTil);
             KortUtils.stokk(bunkeFra);
             bunkeTil.leggTil(kortOnTop);
         } else {
             System.out.println("nei :3");
         }
-
+        //TODO - End
     }
 
     /**
@@ -155,9 +162,9 @@ public class Bord {
      * @param k kort som skal legges ned.
      */
     public void leggNedBunkeTil(Kort k) {
-
+        //TODO - Start
         bunkeTil.leggTil(k);
-
+        //TODO - End
 
     }
 }

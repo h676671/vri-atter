@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8894ee0-30d8-4359-9079-90905cfbd169" name="Changes" comment="Oppgave 2.1 Ferdig">
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TSpiller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TestBord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TestKontroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TestSpill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TestSpiller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/kontroll/tester/TestSydSpiller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/modell/tester/TestKortSamling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/modell/tester/TestKortUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vri-atter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vri-atter.iml" afterDir="false" />
+    <list default="true" id="b8894ee0-30d8-4359-9079-90905cfbd169" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Bord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Bord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spiller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortSamling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/modell/tester/TestKortSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/modell/tester/TestKortSamling.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,30 +46,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/david/IdeaProjects/vri-atter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/david/IdeaProjects/vri-atter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TestBord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vri-atter" />
@@ -110,7 +103,10 @@
       <workItem from="1697313693389" duration="3904000" />
       <workItem from="1697319168751" duration="1267000" />
       <workItem from="1697327728726" duration="4294000" />
-      <workItem from="1697332933775" duration="985000" />
+      <workItem from="1697332933775" duration="1107000" />
+      <workItem from="1697357673257" duration="76000" />
+      <workItem from="1697357786516" duration="2358000" />
+      <workItem from="1697371335304" duration="398000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -128,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697332393099</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="La til enhets-tester">
+      <option name="closed" value="true" />
+      <created>1697334034753</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697334034753</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +142,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Commit" />
     <MESSAGE value="Oppgave 2.1 Ferdig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oppgave 2.1 Ferdig" />
+    <MESSAGE value="La til enhets-tester" />
+    <option name="LAST_COMMIT_MESSAGE" value="La til enhets-tester" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vri_atter$TestBord.ic" NAME="TestBord Coverage Results" MODIFIED="1697333941144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>no.hvl.dat100.prosjekt.kontroll.tester.*</FILTER>
+    </SUITE>
   </component>
 </project>

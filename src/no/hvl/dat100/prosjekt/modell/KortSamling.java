@@ -21,10 +21,10 @@ public class KortSamling {
 	 * Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	 */
 	public KortSamling() {
-
+		//TODO - Start
 		this.samling = new Kort[MAKS_KORT];
 		this.antall = 0;
-
+		//TODO - End
 	}
 
 	/**
@@ -37,9 +37,9 @@ public class KortSamling {
 	 *@return tabell av kort.
 	 */
 	public Kort[] getSamling() {
-		
+		//TODO - Start
 		return this.samling;
-		
+		//TODO - End
 	}
 	
 	/**
@@ -48,9 +48,9 @@ public class KortSamling {
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
-		
+		//TODO - Start
 		return this.antall;
-
+		//TODO - End
 	}
 	
 	/**
@@ -59,9 +59,9 @@ public class KortSamling {
 	 * @return true om samlinga er tom, false ellers.
 	 */
 	public boolean erTom() {
-		
+		//TODO - Start
 		return this.antall == 0;
-
+		//TODO - End
 	}
 
 	/**
@@ -71,38 +71,38 @@ public class KortSamling {
 	 *            er kortet som skal leggast til.
 	 */
 	public void leggTil(Kort kort) {
-
+		//TODO - Start
 		if (this.antall < this.samling.length){
 			this.samling[this.antall] = kort;
 			this.antall++;
 		} else {
 			throw new IllegalArgumentException("Full kortstokk!");
 		}
-
+		//TODO - End
 	}
 	
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
-	public void leggTilAlle() {
-
+	public void leggTilAlle(KortSamling bunkeTil) {
+		//TODO - Start
 		for (var farge : Kortfarge.values()){
 			for (int verdi = 0 ; verdi < Regler.MAKS_KORT_FARGE ; verdi++){
 				leggTil(new Kort(farge, verdi+1));
 			}
 
 		}
-
+		//TODO - End
 	}
 
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
 	public void fjernAlle() {
-
+		//TODO - Start
 		antall = 0;
-
+		//TODO - End
 	}
 	
 	/**
@@ -112,9 +112,9 @@ public class KortSamling {
 	 *         null.
 	 */
 	public Kort seSiste() {
-
+		//TODO - Start
 		return samling[antall-1];
-
+		//TODO - End
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class KortSamling {
 	 *         null.
 	 */
 	public Kort taSiste() {
-
+		//TODO - Start
 		if (erTom()) {
 			return null;
 		}
@@ -132,7 +132,7 @@ public class KortSamling {
 		var sisteKort = seSiste();
 		antall--;
 		return sisteKort;
-
+		//TODO - End
 	}
 	
 	/**
@@ -143,12 +143,14 @@ public class KortSamling {
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
 	public boolean har(Kort kort) {
+		//TODO - Start
 		for (int i = 0 ; i < antall ; i++){
 			if (samling[i].equals(kort)) {
 				return true;
 			}
 		}
 		return false;
+		//TODO - End
 	}
 
 	/**
@@ -162,7 +164,7 @@ public class KortSamling {
 	 */
 			 
 	public boolean fjern(Kort kort) {
-
+		//TODO - Start
 		for (int i = 0 ; i < antall ; i++){
 			if (samling[i].equals(kort)) {
 				samling[i] = null;
@@ -171,7 +173,7 @@ public class KortSamling {
 		}
 
 		return false;
-
+ 		//TODO - End
 	}
 
 	/**
@@ -181,12 +183,13 @@ public class KortSamling {
 	 *         som i kortsamlinga.
 	 */
 	public Kort[] getAllekort() {
-		
+		//TODO - Start
 		Kort[] alleKort = new Kort[antall];
 		for (int i = 0 ; i < antall ; i++){
 			alleKort[i] = samling[i];
 		}
 		return alleKort;
+		//TODO - End
 	}
 
 }
