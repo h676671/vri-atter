@@ -140,7 +140,7 @@ public class Bord {
 
         if (bunkeFra.erTom()){
             Kort kortOnTop = bunkeTil.taSiste();
-            bunkeFra.leggTilAlle(bunkeTil);
+            bunkeFra.leggTilAlle();
             KortUtils.stokk(bunkeFra);
             bunkeTil.leggTil(kortOnTop);
         } else {

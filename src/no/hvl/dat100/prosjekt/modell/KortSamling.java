@@ -85,7 +85,7 @@ public class KortSamling {
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
-	public void leggTilAlle(KortSamling bunkeTil) {
+	public void leggTilAlle() {
 
 		for (var farge : Kortfarge.values()){
 			for (int verdi = 0 ; verdi < Regler.MAKS_KORT_FARGE ; verdi++){
@@ -188,5 +188,5 @@ public class KortSamling {
 		}
 		return alleKort;
 	}
-	
+
 }
