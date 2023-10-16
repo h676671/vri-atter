@@ -131,10 +131,14 @@ public class Spill {
 
 		// TODO - START
 			
-		if (bord.getBunkeFra().equals(erTom())) {
-			spiller.trekker(trukketKort);
-			return trukket.Kort;
+		if (bord.getBunkeFra().erTom()) {
+			bord.snuTilBunken();
 		}
+		
+		Kort trukketKort = bord.getBunkeFra().taSiste();
+		spiller.trekker(trukketKort);
+		
+		return trukketKort;
 
 		// TODO - END
 	}
@@ -217,6 +221,8 @@ public class Spill {
   public Kort utforHandling(ISpiller spiller, Handling handling) {
 	   Kort kort = handling.getKort();
 	    HandlingsType handlingType = handling.getHandling();
+	    
+	    return kort;
  }
 		// TODO - START
 
