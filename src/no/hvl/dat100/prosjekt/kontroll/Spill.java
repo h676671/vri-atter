@@ -213,35 +213,13 @@ public class Spill {
 	 * 
 	 * @return kort som trekkes, kort som spilles eller null ved forbi.
 	 */
-	public Kort utforHandling(ISpiller spiller, Handling handling) {
+
 
 		// TODO - START
-		if (handling.getHandling() == HandlingsType.LEGGNED) {
-	        // Handle the case where the player wants to play a card.
-	        Kort kort = handling.getKort();
-	        if (spiller.getHand().har(kort) && Regler.kanLeggeNed(kort, bord.seOversteBunkeTil())) {
-	            // The player has the card and it's a legal play, so play it.
-	            bord.leggNedBunkeTil(kort);
-	            spiller.fjernKort(kort);
-	            spiller.setAntallTrekk(0);
-	            return kort;
-	        }
-	    } else if (handling.getHand() == HandlingsType.TREKK) {
-	        // Handle the case where the player wants to draw a card.
-	        if (spiller.getAntallTrekk() < Regler.maksTrekk()) {
-	            Kort kort = bord.taOversteFraBunke();
-	            spiller.trekker(kort);
-	            return kort;
-	        }
-	    } else if (handling.getHand() == HandlingsType.FORBI) {
-	        // Handle the case where the player wants to skip their turn.
-	        spiller.setAntallTrekk(0);
-	    }
-	    return null; // The action was not successful or it was a "FORBI".
+
 	}
 
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
 			
-}
