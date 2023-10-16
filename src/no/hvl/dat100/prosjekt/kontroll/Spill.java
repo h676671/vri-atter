@@ -93,12 +93,14 @@ public class Spill {
 		
 		// TODO - START
 		
-		bord.getBunkeFra().leggTilAlle(bord.getBunkeTil());
-		bord.getBunkeFra().stokk();
-		
-		delutKort();
-		
-		bord.vendOversteFraBunke();
+		 if (bord.getBunkeFra().erTom()) {
+		        // Initialize and populate the 'fra-bunken'
+		        // You can use KortUtils to create a standard deck of cards
+		        bord.getBunkeFra().leggTilAlle(KortUtils.finnAlleKort());
+		        bord.getBunkeFra().stokk();
+		    }
+
+		    delutKort();
 		// TODO - END
 	}
 
@@ -219,14 +221,17 @@ public class Spill {
 	 */
 
   public Kort utforHandling(ISpiller spiller, Handling handling) {
-	   Kort kort = handling.getKort();
+	  
+	  Kort kort = handling.getKort();
 	    HandlingsType handlingType = handling.getHandling();
 	    
-	    return kort;
+	    return kort; 
+	 
  }
+}
 		// TODO - START
 
-	}
+	
 
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
