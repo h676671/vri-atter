@@ -214,7 +214,10 @@ public class Spill {
 	 * @return kort som trekkes, kort som spilles eller null ved forbi.
 	 */
 
-
+  public Kort utforHandling(ISpiller spiller, Handling handling) {
+	   Kort kort = handling.getKort();
+	    HandlingsType handlingType = handling.getHandling();
+ }
 		// TODO - START
 
 	}
