@@ -30,8 +30,8 @@ public class Spill {
 		
 		// TODO - START
 		
-		nord = new Spiller(Spillere.NORD);
-		syd = new Spiller(Spillere.SYD);
+		nord = new NordSpiller(Spillere.NORD);
+		syd = new SydSpiller(Spillere.SYD);
 		bord = new Bord();
 		
 	}
@@ -216,22 +216,32 @@ public class Spill {
 	public Kort utforHandling(ISpiller spiller, Handling handling) {
 
 		// TODO - START
-		Kort kort = null;
+		if (handling.getHandling() == HandlingsType.LEGGNED) {
+	        // Handle the case where the player wants to play a card.
+	        Kort kort = handling.getKort();
+	        if (spiller.getHand().har(kort) && Regler.kanLeggeNed(kort, bord.seOversteBunkeTil())) {
+	            // The player has the card and it's a legal play, so play it.
+	            bord.leggNedBunkeTil(kort);
+	            spiller.fjernKort(kort);
+	            spiller.setAntallTrekk(0);
+	            return kort;
+	        }
+	    } else if (handling.getHand() == HandlingsType.TREKK) {
+	        // Handle the case where the player wants to draw a card.
+	        if (spiller.getAntallTrekk() < Regler.maksTrekk()) {
+	            Kort kort = bord.taOversteFraBunke();
+	            spiller.trekker(kort);
+	            return kort;
+	        }
+	    } else if (handling.getHand() == HandlingsType.FORBI) {
+	        // Handle the case where the player wants to skip their turn.
+	        spiller.setAntallTrekk(0);
+	    }
+	    return null; // The action was not successful or it was a "FORBI".
+	}
 
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
-				
-		if (handling == Handling.TREKK) {
-			kort = trekkFraBunke(spiller);
-		} else if (handling == Handling.LEGGUT) {
-			kort = spiller.nesteHandling(bord.seOversteBunkeTil()).getKort();
-			leggnedKort(spiller, kort);
-		} else {
-			forbiSpiller(spiller);
-		}
-        return kort;
-		// TODO - END
-	}
-
+			
 }
