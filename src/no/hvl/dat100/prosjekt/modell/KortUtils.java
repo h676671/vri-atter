@@ -17,9 +17,25 @@ public class KortUtils {
 	 */
 	
 	public static void sorter(KortSamling samling) {
+		//TODO - Start
 
-		Arrays.sort(samling.getSamling());
+		//Bruker bubblesort :)
 
+		int antallKort = samling.getAntalKort();
+		Kort[] kortstokk = samling.getSamling();
+
+		for (int i = 0; i < (antallKort - 1); i++){
+			for (int j = 0; j < (antallKort - 1); j++){
+				Kort kort1 = kortstokk[j];
+				Kort kort2 = kortstokk[j + 1];
+
+				if (kort1.compareTo(kort2) > 0){
+					kortstokk[j] = kort2;
+					kortstokk[j+1] = kort1;
+				}
+			}
+		}
+		//TODO - End
 	}
 	
 	/**

@@ -1,4 +1,4 @@
-package no.hvl.dat100.prosjekt.kontroll.tester;
+package no.hvl.dat100.prosjekt.tester.kontroll;
 
 import org.junit.Test;
 

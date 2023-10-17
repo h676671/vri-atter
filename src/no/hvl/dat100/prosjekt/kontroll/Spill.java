@@ -30,8 +30,8 @@ public class Spill {
 		
 		// TODO - START
 		
-		nord = new NordSpiller(Spillere.NORD);
-		syd = new SydSpiller(Spillere.SYD);
+		//nord = new Spiller(Spillere.NORD);
+		//syd = new Spiller(Spillere.SYD);
 		bord = new Bord();
 		
 	}
@@ -92,15 +92,13 @@ public class Spill {
 	public void start() {
 		
 		// TODO - START
+		/*
+		bord.getBunkeFra().leggTilAlle(bord.getBunkeTil());
+		bord.getBunkeFra().stokk();
+		*/
+		delutKort();
 		
-		 if (bord.getBunkeFra().erTom()) {
-		        // Initialize and populate the 'fra-bunken'
-		        // You can use KortUtils to create a standard deck of cards
-		        bord.getBunkeFra().leggTilAlle(KortUtils.finnAlleKort());
-		        bord.getBunkeFra().stokk();
-		    }
-
-		    delutKort();
+		bord.vendOversteFraBunke();
 		// TODO - END
 	}
 
@@ -133,16 +131,13 @@ public class Spill {
 
 		// TODO - START
 			
-		if (bord.getBunkeFra().erTom()) {
-			bord.snuTilBunken();
-		}
-		
-		Kort trukketKort = bord.getBunkeFra().taSiste();
-		spiller.trekker(trukketKort);
-		
-		return trukketKort;
+		/*if (bord.getBunkeFra().equals(erTom())) {
+			spiller.trekker(trukketKort);
+			return trukket.Kort;
+		}*/
 
 		// TODO - END
+		return null;
 	}
 
 	/**
@@ -219,21 +214,25 @@ public class Spill {
 	 * 
 	 * @return kort som trekkes, kort som spilles eller null ved forbi.
 	 */
+	public Kort utforHandling(ISpiller spiller, Handling handling) {
 
-  public Kort utforHandling(ISpiller spiller, Handling handling) {
-	  
-	  Kort kort = handling.getKort();
-	    HandlingsType handlingType = handling.getHandling();
-	    
-	    return kort; 
-	 
- }
-}
 		// TODO - START
-
-	
+		Kort kort = null;
 
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
-			
+				
+		/*if (handling == Handling.TREKK) {
+			kort = trekkFraBunke(spiller);
+		} else if (handling == Handling.LEGGUT) {
+			kort = spiller.nesteHandling(bord.seOversteBunkeTil()).getKort();
+			leggnedKort(spiller, kort);
+		} else {
+			forbiSpiller(spiller);
+		}*/
+        return kort;
+		// TODO - END
+	}
+
+}

@@ -33,18 +33,18 @@ public class KortSamling {
 	 * tilgang til antallet ved å bruke metoden getAntallKort(). Metoden er
 	 * først og fremst ment å brukes i testklasser. Om man trenger
 	 * kortene utenfor, anbefales metoden getAlleKort().
-	 * 
-	 *@return tabell av kort.
+	 *
+	 * @return tabell av kort.
 	 */
 	public Kort[] getSamling() {
 		//TODO - Start
 		return this.samling;
 		//TODO - End
 	}
-	
+
 	/**
 	 * Antall kort i samlingen.
-	 * 
+	 *
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
@@ -52,10 +52,10 @@ public class KortSamling {
 		return this.antall;
 		//TODO - End
 	}
-	
+
 	/**
 	 * Sjekker om samlinga er tom.
-	 * 
+	 *
 	 * @return true om samlinga er tom, false ellers.
 	 */
 	public boolean erTom() {
@@ -66,13 +66,12 @@ public class KortSamling {
 
 	/**
 	 * Legg et kort til samlinga.
-	 * 
-	 * @param kort
-	 *            er kortet som skal leggast til.
+	 *
+	 * @param kort er kortet som skal leggast til.
 	 */
 	public void leggTil(Kort kort) {
 		//TODO - Start
-		if (this.antall < this.samling.length){
+		if (this.antall < this.samling.length) {
 			this.samling[this.antall] = kort;
 			this.antall++;
 		} else {
@@ -80,16 +79,16 @@ public class KortSamling {
 		}
 		//TODO - End
 	}
-	
+
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
-	public void leggTilAlle(KortSamling bunkeTil) {
+	public void leggTilAlle() {
 		//TODO - Start
-		for (var farge : Kortfarge.values()){
-			for (int verdi = 0 ; verdi < Regler.MAKS_KORT_FARGE ; verdi++){
-				leggTil(new Kort(farge, verdi+1));
+		for (var farge : Kortfarge.values()) {
+			for (int verdi = 0; verdi < Regler.MAKS_KORT_FARGE; verdi++) {
+				leggTil(new Kort(farge, verdi + 1));
 			}
 
 		}
@@ -104,24 +103,27 @@ public class KortSamling {
 		antall = 0;
 		//TODO - End
 	}
-	
+
 	/**
 	 * Ser på siste kortet i samlinga.
-	 * 
+	 *
 	 * @return siste kortet i samlinga, men det blir ikke fjernet. Dersom samalinga er tom, returneres
-	 *         null.
+	 * null.
 	 */
 	public Kort seSiste() {
 		//TODO - Start
-		return samling[antall-1];
+		if (erTom()) {
+			return null;
+		}
+		return samling[antall - 1];
 		//TODO - End
 	}
 
 	/**
 	 * Tek ut siste kort fra samlinga.
-	 * 
+	 *
 	 * @return siste kortet i samlinga. Dersom samalinga er tom, returneres
-	 *         null.
+	 * null.
 	 */
 	public Kort taSiste() {
 		//TODO - Start
@@ -134,17 +136,17 @@ public class KortSamling {
 		return sisteKort;
 		//TODO - End
 	}
-	
+
 	/**
 	 * Undersøker om et kort finst i samlinga.
-	 * 
-	 * @param kort.
-	 * 
+	 * <p>
+	 * /*@param kort.
+	 *
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
 	public boolean har(Kort kort) {
 		//TODO - Start
-		for (int i = 0 ; i < antall ; i++){
+		for (int i = 0; i < antall; i++) {
 			if (samling[i].equals(kort)) {
 				return true;
 			}
@@ -156,25 +158,36 @@ public class KortSamling {
 	/**
 	 * Fjernar et kort frå samlinga. Dersom kortet ikke finnest i samlinga,
 	 * skjer ingenting med samilingen
-	 * 
-	 * @param kort
-	 *            kortet som skal fjernast. Dersom kortet ikke finnes, skjer
-	 *            ingenting.
+	 *
+	 * @param kort kortet som skal fjernast. Dersom kortet ikke finnes, skjer
+	 *             ingenting.
 	 * @return true om kortet blev fjernet fra samlinga, false ellers.
 	 */
-			 
+
 	public boolean fjern(Kort kort) {
+
+
 		//TODO - Start
-		for (int i = 0 ; i < antall ; i++){
+		boolean funnetKort = false;
+
+		for (int i = 0; i < antall; i++) {
 			if (samling[i].equals(kort)) {
-				samling[i] = null;
-				return true;
+				funnetKort = true;
+			}
+			if (funnetKort) {
+				if (i < this.antall - 1) {
+					samling[i] = samling[i + 1];
+				} else{
+					samling[i] = null;
+				}
 			}
 		}
-
-		return false;
- 		//TODO - End
+	if (funnetKort){
+		antall--;
 	}
+	return funnetKort;
+	//TODO - End
+}
 
 	/**
 	 * Gir kortene som en tabell av samme lengde som antall kort i samlingen

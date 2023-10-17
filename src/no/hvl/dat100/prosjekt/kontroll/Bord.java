@@ -1,5 +1,6 @@
 package no.hvl.dat100.prosjekt.kontroll;
 
+import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.modell.KortUtils;
 import no.hvl.dat100.prosjekt.modell.Kort;
@@ -22,6 +23,7 @@ public class Bord {
     public Bord() {
         //TODO - Start
         bunkeFra = new KortSamling();
+        bunkeFra.leggTilAlle();
         bunkeTil = new KortSamling();
         //TODO - End
 
@@ -36,8 +38,7 @@ public class Bord {
      */
     public KortSamling getBunkeTil() {
         //TODO - Start
-        Bord bunkeTil = new Bord();
-        return bunkeTil.getBunkeTil();
+        return bunkeTil;
         //TODO - End
     }
 
@@ -48,8 +49,7 @@ public class Bord {
      */
     public KortSamling getBunkeFra() {
         //TODO - Start
-        Bord bunkeFra = new Bord();
-        return bunkeFra.getBunkeFra();
+       return this.bunkeFra;
         //TODO - End
     }
 
@@ -145,9 +145,10 @@ public class Bord {
      */
     public void snuTilBunken() {
         //TODO - Start
-        if (bunkeFra.erTom()){
+        if (bunkeFra.erTom()) {
             Kort kortOnTop = bunkeTil.taSiste();
-            bunkeFra.leggTilAlle(bunkeTil);
+            bunkeFra.fjernAlle();
+            bunkeFra.leggTilAlle();
             KortUtils.stokk(bunkeFra);
             bunkeTil.leggTil(kortOnTop);
         } else {

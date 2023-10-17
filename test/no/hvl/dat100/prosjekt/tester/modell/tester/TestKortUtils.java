@@ -1,4 +1,4 @@
-package no.hvl.dat100.prosjekt.modell.tester;
+package no.hvl.dat100.prosjekt.tester.modell.tester;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -46,7 +46,7 @@ class TestKortUtils {
 		KortUtils.sorter(hand);
 		
 		Kort[] samling = hand.getSamling();
-				
+
 		assertEquals(3, hand.getAntalKort());
 		
 		assertEquals(kort1, samling[0]);

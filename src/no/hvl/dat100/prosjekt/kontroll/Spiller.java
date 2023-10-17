@@ -151,16 +151,10 @@ public abstract class Spiller implements ISpiller {
 	public void trekker(Kort kort) {
 		
 		// TODO - START
-		
 		if (kort != null) {
-			
 			leggTilKort(kort);
-			
 			antalltrekk++;
 		}
-
-
-
 		// TODO - END
 		
 	}

@@ -1,4 +1,4 @@
-package no.hvl.dat100.prosjekt.modell.tester;
+package no.hvl.dat100.prosjekt.tester.modell.tester;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -89,7 +89,7 @@ public class TestKortSamling {
 	
 		KortSamling samling = new KortSamling();
 		
-		samling.leggTilAlle(bunkeTil);
+		samling.leggTilAlle();
 		
 		assertEquals(4 * Regler.MAKS_KORT_FARGE,samling.getAntalKort());
 		
