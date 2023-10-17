@@ -6,6 +6,7 @@ import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 import no.hvl.dat100.prosjekt.kontroll.spill.Handling;
+import no.hvl.dat100.prosjekt.kontroll.spill.HandlingsType;
 import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.KortUtils;
@@ -30,8 +31,8 @@ public class Spill {
 		
 		// TODO - START
 		
-		//nord = new Spiller(Spillere.NORD);
-		//syd = new Spiller(Spillere.SYD);
+		nord = new NordSpiller(Spillere.NORD);
+		syd = new SydSpiller(Spillere.SYD);
 		bord = new Bord();
 		
 	}
@@ -92,10 +93,10 @@ public class Spill {
 	public void start() {
 		
 		// TODO - START
-		/*
+		
 		bord.getBunkeFra().leggTilAlle(bord.getBunkeTil());
 		bord.getBunkeFra().stokk();
-		*/
+		
 		delutKort();
 		
 		bord.vendOversteFraBunke();
@@ -131,10 +132,10 @@ public class Spill {
 
 		// TODO - START
 			
-		/*if (bord.getBunkeFra().equals(erTom())) {
+		if (bord.getBunkeFra().equals(erTom())) {
 			spiller.trekker(trukketKort);
 			return trukket.Kort;
-		}*/
+		}
 
 		// TODO - END
 		return null;
@@ -223,14 +224,14 @@ public class Spill {
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
 				
-		/*if (handling == Handling.TREKK) {
+		if (handling.getType().equals(HandlingsType.TREKK)) {
 			kort = trekkFraBunke(spiller);
-		} else if (handling == Handling.LEGGUT) {
+		} else if (handling.getType().equals(HandlingsType.LEGGNED)) {
 			kort = spiller.nesteHandling(bord.seOversteBunkeTil()).getKort();
 			leggnedKort(spiller, kort);
 		} else {
 			forbiSpiller(spiller);
-		}*/
+		}
         return kort;
 		// TODO - END
 	}
