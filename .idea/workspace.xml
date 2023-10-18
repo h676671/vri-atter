@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8894ee0-30d8-4359-9079-90905cfbd169" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vri-atter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vri-atter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spill.java" afterDir="false" />
-    </list>
+    <list default="true" id="b8894ee0-30d8-4359-9079-90905cfbd169" name="Changes" comment="Fikset enhetsTester i TestSpill" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +167,7 @@
       <workItem from="1697454295060" duration="13479000" />
       <workItem from="1697540944684" duration="571000" />
       <workItem from="1697661795933" duration="820000" />
-      <workItem from="1697665162962" duration="1083000" />
+      <workItem from="1697665162962" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -206,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697373185708</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fikset enhetsTester i TestSpill">
+      <option name="closed" value="true" />
+      <created>1697666521433</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697666521433</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +221,8 @@
     <MESSAGE value="Oppgave 2.1 Ferdig" />
     <MESSAGE value="La til enhets-tester" />
     <MESSAGE value="fikset TODO i hver metode med start og end" />
-    <option name="LAST_COMMIT_MESSAGE" value="fikset TODO i hver metode med start og end" />
+    <MESSAGE value="Fikset enhetsTester i TestSpill" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fikset enhetsTester i TestSpill" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
