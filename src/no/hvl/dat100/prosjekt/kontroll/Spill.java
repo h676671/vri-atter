@@ -91,14 +91,21 @@ public class Spill {
 	 * av en klasse laget av gruppen (implementeres i oppgave 3).
 	 */
 	public void start() {
-		
+		Spill spill = new Spill();
+
+		int antallTil = bord.getBunkeTil().getAntalKort();
+		int antallFra = bord.getBunkeFra().getAntalKort();
+
 		// TODO - START
-		    if (bord.getBunkeFra().erTom()) {
-		        bord.getBunkeFra().leggTilAlle(KortUtils.finnAlleKort());
-		        bord.getBunkeFra().stokk();
+		    if (antallFra == 0) {
+		        bord.getBunkeFra().leggTilAlle();
+				KortUtils.stokk(bord.getBunkeFra());
 		    }
-		    
+
 		    delutKort();
+
+			Kort toppKort = bord.getBunkeFra().taSiste();
+			bord.getBunkeTil().leggTil(toppKort);
 		// TODO - END
 	}
 

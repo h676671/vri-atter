@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8894ee0-30d8-4359-9079-90905cfbd169" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vri-atter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vri-atter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Bord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Bord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/kontroll/Spiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortSamling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hvl/dat100/prosjekt/modell/KortUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TSpiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TSpiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TestBord.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TestBord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TestKontroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TestKontroll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TestSpill.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TestSpill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TestSpiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TestSpiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/kontroll/tester/TestSydSpiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/kontroll/TestSydSpiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/modell/tester/TestKortSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/modell/tester/TestKortSamling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/modell/tester/TestKortUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/no/hvl/dat100/prosjekt/tester/modell/tester/TestKortUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +38,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2Wlii2IXVagNWL9m7Do3xJAhPdF" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -80,8 +69,21 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TestKortUtils">
-    <configuration name="TestBord (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestSpill">
+    <configuration name="VriOtteSpil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.main.VriOtteSpil" />
+      <module name="vri-atter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.hvl.dat100.prosjekt.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKontroll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vri-atter" />
       <extension name="coverage">
         <pattern>
@@ -90,81 +92,64 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll" />
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll.TestBord" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll.TestKontroll" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKortSamling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vri-atter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.modell.tester.*" />
+          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.kontroll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester" />
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester.TestKortSamling" />
+      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll.TestSpill" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKortSamling.Testfjern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpiller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vri-atter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.modell.tester.*" />
+          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.kontroll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester" />
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester.TestKortSamling" />
-      <option name="METHOD_NAME" value="Testfjern" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestKortUtils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vri-atter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.modell.tester.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester" />
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester.TestKortUtils" />
+      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll.TestSpiller" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKortUtils.testsorter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSydSpiller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vri-atter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.modell.tester.*" />
+          <option name="PATTERN" value="no.hvl.dat100.prosjekt.tester.kontroll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester" />
-      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.modell.tester.TestKortUtils" />
-      <option name="METHOD_NAME" value="testsorter" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll" />
+      <option name="MAIN_CLASS_NAME" value="no.hvl.dat100.prosjekt.tester.kontroll.TestSydSpiller" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestKortUtils" />
-        <item itemvalue="JUnit.TestKortSamling" />
-        <item itemvalue="JUnit.TestBord (1)" />
-        <item itemvalue="JUnit.TestKortUtils.testsorter" />
-        <item itemvalue="JUnit.TestKortSamling.Testfjern" />
+        <item itemvalue="JUnit.TestSpill" />
+        <item itemvalue="Application.VriOtteSpil" />
+        <item itemvalue="JUnit.TestKontroll" />
+        <item itemvalue="JUnit.TestSydSpiller" />
+        <item itemvalue="JUnit.TestSpiller" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +171,8 @@
       <workItem from="1697378923773" duration="3722000" />
       <workItem from="1697454295060" duration="13479000" />
       <workItem from="1697540944684" duration="571000" />
+      <workItem from="1697661795933" duration="820000" />
+      <workItem from="1697665162962" duration="1083000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
