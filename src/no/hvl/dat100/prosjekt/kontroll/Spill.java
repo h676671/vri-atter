@@ -93,13 +93,12 @@ public class Spill {
 	public void start() {
 		
 		// TODO - START
-		
-		bord.getBunkeFra().leggTilAlle(bord.getBunkeTil());
-		bord.getBunkeFra().stokk();
-		
-		delutKort();
-		
-		bord.vendOversteFraBunke();
+		    if (bord.getBunkeFra().erTom()) {
+		        bord.getBunkeFra().leggTilAlle(KortUtils.finnAlleKort());
+		        bord.getBunkeFra().stokk();
+		    }
+		    
+		    delutKort();
 		// TODO - END
 	}
 
@@ -131,15 +130,19 @@ public class Spill {
 	public Kort trekkFraBunke(ISpiller spiller) {
 
 		// TODO - START
-			
-		if (bord.getBunkeFra().equals(erTom())) {
-			spiller.trekker(trukketKort);
-			return trukket.Kort;
+		
+			if (bord.getBunkeFra().erTom()) {
+			        bord.snuTilBunken();
+			    }
+
+			    Kort trukketKort = bord.getBunkeFra().taSiste();
+			    spiller.trekker(trukketKort);
+
+			    return trukketKort;
 		}
 
 		// TODO - END
-		return null;
-	}
+
 
 	/**
 	 * Gir neste handling for en spiller (spilt et kort, trekker et kort, forbi)
